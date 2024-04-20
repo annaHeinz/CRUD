@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Изменить пользователя</h1>
+
+< <form method="post" th:if="${allowDelete}" th:action="@{/delete/{id}(id=${user.id})}" th:object="${user}">
+    <input type="submit" value="Удалить"/>
+</form>
+<div th:if="${errorMessage}" th:utext="${errorMessage}" class="error">
+    ...
+</div>
+</body>
+</html>
